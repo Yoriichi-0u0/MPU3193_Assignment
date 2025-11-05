@@ -1,113 +1,286 @@
 <!doctype html>
 <html lang="en">
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Home — SDG 4</title>
-    <link rel="stylesheet" href="assets/css/main.css" />
-</head>
-<body>
-    <a class="skip" href="#main">Skip to content</a>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="SDG 4 home base for our AI in Education project: case studies, classroom actions, a responsible AI campaign, and team reflections from Swinburne Sarawak.">
+		<meta property="og:title" content="SDG 4 | Quality Education | AI in Education">
+		<meta property="og:description" content="SDG 4 home base for our AI in Education project: case studies, classroom actions, a responsible AI campaign, and team reflections from Swinburne Sarawak.">
+		<title>
+			SDG 04: Quality Education | AI in Education
+		</title>
+		<link rel="stylesheet" href="styles.css">
+		<script src="script.js" defer>
+		</script>
+	</head>
+	<body id="top">
+		<header class="site">
+			<div class="container nav">
+				<div class="brand">
+					<img class="logo" src="assets/icons/AI in Education.png" alt="AI in Education logo">
+					<div class="title">
+						AI in Education
+					</div>
+				</div>
+				<button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+					<span class="nav-toggle__label">
+						Menu
+					</span>
+					<span class="nav-toggle__icon" aria-hidden="true">
+					</span>
+				</button>
+				<nav id="primary-nav" aria-label="Primary">
+					<ul>
+						<li>
+							<a href="#">
+								Home
+							</a>
+						</li>
+						<li class="nav-item--about">
+							<a href="about.html">
+								About Us
+							</a>
+						</li>
+						<li>
+							<a href="cases.html">
+								Case Studies
+							</a>
+						</li>
+						<li>
+							<a href="campaign.html">
+								Campaign
+							</a>
+						</li>
+						<li>
+							<a href="references.html">
+								References
+							</a>
+						</li>
+						<li>
+							<a href="appendix.html">
+								Appendix
+							</a>
+						</li>
+					</ul>
+				</nav>
+				<div class="nav-actions">
+					<a class="about-link" href="about.html">
+						About Us
+					</a>
+					<button class="theme-toggle" type="button" aria-pressed="false" aria-label="Toggle light/dark" title="Toggle light/dark">
+						<span class="theme-toggle__icon" aria-hidden="true">
+						</span>
+					</button>
+				</div>
+			</div>
+		</header>
+		<section class="banner" aria-label="Banner">
+			<img src="assets/icons/Hero Background.jpg" alt="AI in Education banner">
+		</section>
+		<section class="hero hero--home">
+			<div class="container hero-grid">
+				<div class="hero-media">
+					<figure class="hero-video">
+						<iframe
+							class="lazy-iframe"
+							data-src="https://www.youtube-nocookie.com/embed/NNE41BfpzYk?rel=0&modestbranding=1"
+							title="Project Video | AI in Education"
+							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+							referrerpolicy="strict-origin-when-cross-origin"
+							allowfullscreen>
+						</iframe>
+						<noscript>
+							<iframe
+								src="https://www.youtube-nocookie.com/embed/NNE41BfpzYk?rel=0&modestbranding=1"
+								title="Project Video | AI in Education"
+								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+								referrerpolicy="strict-origin-when-cross-origin"
+								allowfullscreen>
+							</iframe>
+						</noscript>
+						<figcaption>
+							Virtual Presentation
+						</figcaption>
+					</figure>
+				</div>
+				<div class="hero-copy">
+					<h1>
+						SDG 4: Quality Education
+					</h1>
+					<p class="tagline">
+						AI in Education: Are We Teaching Knowledge or Training Machines?
+					</p>
+					<p class="intro">
+						Welcome to AI in Education, our SDG 4 e-portfolio! We believe quality learning is not about how much you read but how deeply you understand, explain, and create. Used wisely, AI frees time, personalizes practice, and opens doors for every learner and teacher. Explore our cases, campaign, and reflections to see how AI turns classrooms into spaces of curiosity, dialogue, and real problem solving. Let’s teach minds, not machines.
+					</p>
+					<div class="hero-actions">
+						<a class="button button--primary" href="cases.html">
+							Explore Case Studies
+						</a>
+						<a class="button button--ghost" href="about.html">
+							Meet the Team
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="section" id="video">
+			<div class="container">
+				<h2 class="section-title">Video</h2>
+				<div class="video-embed">
+					<iframe class="lazy-iframe" data-src="https://www.youtube-nocookie.com/embed/NNE41BfpzYk?rel=0&modestbranding=1" title="Project Video | AI in Education" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+				</div>
+			</div>
+		</section>
 
-    <header class="site-header">
-        <div class="container header-inner">
-            <div class="logo">SDG 4 • AI in Education</div>
-            <nav class="nav">
-                <a href="index.html" class="active">Home</a>
-                <a href="cases/index.html">Case Studies</a>
-                <a href="solutions/index.html">Solutions</a>
-                <a href="connections/index.html">Lecture Connections</a>
-                <a href="about/index.html">About Us</a>
-                <a href="reflections/index.html">Reflections</a>
-                <a href="references/index.html">References</a>
-                <a href="appendix/index.html">Appendix</a>
-            </nav>
-        </div>
-    </header>
+		<section class="section" id="why-sdg4">
+			<div class="container grid">
+				<div>
+					<h2 class="section-title">
+						Why Quality Education?
+					</h2>
+					<p>
+						Quality Education promises inclusive, equitable learning and lifelong opportunities for everyone. Quality means depth, fairness, and meaningful outcomes, not just more content. Used well, AI helps deliver this promise: it personalizes practice for each learner, improves accessibility with translation and captions, and gives educators back precious time for coaching and feedback. To realize these gains, we must expand access to devices and connectivity, equip teachers to use AI confidently and responsibly, and redesign assessment to reward explanation, application, and creativity. With these foundations, AI strengthens human thinking instead of replacing it.
+					</p>
+				</div>
+				<div>
+					<video id="whyVideo" class="why-video" src="assets/icons/Why Quality Education.mp4" autoplay loop muted playsinline></video>
+				</div>
+			</div>
+		</section>
 
-    <main id="main">
-        <section class="hero container">
-            <h1>SDG 4: Closing Malaysia’s Digital Learning Gap</h1>
-            <p class="lead">AI in Education — Teaching minds, not just training machines.</p>
-            <p>We explore how AI can strengthen learning in Malaysia while protecting fairness, inclusion, and authentic understanding. This portal guides you to our case studies, solutions, lecture links, team profiles, reflections, and references.</p>
-            <p>
-                <a class="btn" href="cases/index.html">Explore Case Studies</a>
-                <a class="btn" href="about/index.html">About the Team</a>
-            </p>
-        </section>
+		<section class="section" id="project">
+			<div class="container">
+				<h2 class="section-title">Project</h2>
+				<div class="project-cards">
+					<a class="project-card" href="cases.html" style="--img:url('assets/icons/Study Cases.jpg')">
+						<span class="project-card__label">Case Studies</span>
+					</a>
+					<a class="project-card" href="campaign.html" style="--img:url('assets/icons/Social Media Campaign.jpg')">
+						<span class="project-card__label">Social Media Campaign</span>
+					</a>
+					<a class="project-card" href="about.html" style="--img:url('assets/icons/About Us.jpg')">
+						<span class="project-card__label">About Us</span>
+					</a>
+				</div>
+			</div>
+		</section>
 
-        <section class="section container">
-            <h2>What This Website Offers</h2>
-            <div class="grid cards">
-                <div class="card">
-                    <h3>Case Studies</h3>
-                    <p>Five Malaysia-focused cases on AI in education. Each case includes factors, implications, and SDG-aligned solutions.</p>
-                    <p><a class="btn" href="cases/index.html">Open Case Studies</a></p>
-                </div>
-                <div class="card">
-                    <h3>Solutions That Work</h3>
-                    <p>Community device libraries, offline-first packs, school Wi-Fi hubs, teacher CPD, and disclosure policies to keep learning authentic.</p>
-                    <p><a class="btn" href="solutions/index.html">See Solutions</a></p>
-                </div>
-                <div class="card">
-                    <h3>Philosophy Connections</h3>
-                    <p>Epistemology, Ethics, Logic, Human Being, and Decolonization — why equitable education is a matter of knowledge and justice.</p>
-                    <p><a class="btn" href="connections/index.html">Lecture Connections</a></p>
-                </div>
-            </div>
-        </section>
+		<section class="section section--alt">
+			<div class="container grid">
+				<div>
+					<img class="conclusion-img" src="assets/icons/Conclusion.jpg" alt="Conclusion image">
+				</div>
+				<div>
+					<h2 class="section-title">Conclusion</h2>
+					<p>AI can and should lift the quality of learning. Used responsibly, it helps students reach clearer explanations faster and frees educators for higher value work such as coaching, feedback, and dialogue.</p>
+					<p>To keep learning meaningful, institutions should set clear classroom AI guidelines, invest in teacher professional development and student AI literacy, and expand access to devices, connectivity, and low‑bandwidth tools. With these foundations in place, assessment can move beyond recall to explanation and creation, so students use AI to understand, not merely to fetch answers.</p>
+				</div>
+			</div>
+		</section>
+		<section class="section" id="group-details">
+			<div class="container">
+				<h2 class="section-title">
+					Group Details
+				</h2>
+				<p>
+					Our group is a team of ten students at Swinburne University of Technology Sarawak. We come from diverse cultural backgrounds and study programs across Computer Science, Engineering, Business, and Biotechnology. Our shared purpose is to explore how AI can advance SDG 4: Quality Education, combining different strengths to produce practical, ethical, and inclusive ideas.
+					<br><br>
+					This e-portfolio is prepared for MPU3193 Philosophy & Current Issues under Dr. Serit anak Banyan.
+				</p>
+				<div class="team-strip" aria-label="Team photos">
+					<img class="avatar" src="assets/team/Yuen Kai Chia.jpeg" alt="Yuen Kai Chia">
+					<img class="avatar" src="assets/team/Sia Jing Li.jpeg" alt="Sia Jing Li">
+					<img class="avatar" src="assets/team/Palle Badalge Sumod Vidunaka Gunaseela.jpeg" alt="Palle Badalge Sumod Vidunaka Gunaseela">
+					<img class="avatar" src="assets/team/Dulina Hansaja Wijayaratne.jpeg" alt="Dulina Hansaja Wijayaratne">
+					<img class="avatar" src="assets/team/Yi Hao Ren.jpeg" alt="Yi Hao Ren">
+					<img class="avatar" src="assets/team/Tian Yu Mao.jpeg" alt="Tian Yu Mao">
+					<img class="avatar" src="assets/team/Farah Adibah Binti Shahar.jpeg" alt="Farah Adibah Binti Shahar">
+					<img class="avatar" src="assets/team/Nur Farzhana Binti Mohamad Dolhardhi.jpeg" alt="Nur Farzhana Binti Mohamad Dolhardhi">
+					<img class="avatar" src="assets/team/Wadiyaralalage Eranda Heshan Chandrasiri.jpeg" alt="Wadiyaralalage Eranda Heshan Chandrasiri">
+					<img class="avatar" src="assets/team/Gae Jayden Mwine.jpeg" alt="Gae Jayden Mwine">
+				</div>
+			</div>
+		</section>
+		<footer>
+			<div class="container">
+				<div class="footer-grid">
+					<div class="footer-brand">
+						<img class="logo" src="assets/icons/AI in Education.png" alt="AI in Education logo">
+						<div class="footer-title">
+							AI in Education
+						</div>
+						<p class="small">
+							© 2025 AI in Education.
+						</p>
+					</div>
+					<nav class="footer-nav" aria-label="Footer">
+						<a href="index.html">
+							Home
+						</a>
+						<a href="cases.html">
+							Case Studies
+						</a>
+						<a href="campaign.html">
+							Campaign
+						</a>
+						<a href="about.html">
+							About Us
+						</a>
+						<a href="references.html">
+							References
+						</a>
+						<a href="appendix.html">
+							Appendix
+						</a>
+					</nav>
+					<div class="footer-extra">
+						<a class="contact-button" href="mailto:104400442@students.swinburne.edu.my">Contact Us</a>
+						<div class="social">
+							<a class="icon-link" href="https://youtu.be/NNE41BfpzYk?si=Nacs5S74gBt02OUi" target="_blank" rel="noopener" aria-label="YouTube">
+								<svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.5 6.2c-.3-1.2-1.3-2.1-2.6-2.3C18.8 3.5 12 3.5 12 3.5s-6.8 0-8.9.4C1.8 4.1.8 5 0.5 6.2 0 8.3 0 12 0 12s0 3.7.5 5.8c.3 1.2 1.3 2.1 2.6 2.3 2.1.4 8.9.4 8.9.4s6.8 0 8.9-.4c1.3-.2 2.3-1.1 2.6-2.3.5-2.1.5-5.8.5-5.8s0-3.7-.5-5.8zM9.6 15.5V8.5L15.8 12l-6.2 3.5z"/></svg>
+							</a>
+							<a class="icon-link" href="https://www.instagram.com/yoriichi_0824?igsh=bjd2bDN5MDJxbmEz&utm_source=qr" target="_blank" rel="noopener" aria-label="Instagram">
+								<svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.9.2 2.6.5.7.3 1.3.6 1.9 1.2.6.6.9 1.2 1.2 1.9.3.7.4 1.4.5 2.6.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.2 1.9-.5 2.6-.3.7-.6 1.3-1.2 1.9-.6.6-1.2.9-1.9 1.2-.7.3-1.4.4-2.6.5-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.9-.2-2.6-.5-.7-.3-1.3-.6-1.9-1.2-.6-.6-.9-1.2-1.2-1.9-.3-.7-.4-1.4-.5-2.6C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.2-1.9.5-2.6.3-.7.6-1.3 1.2-1.9.6-.6 1.2-.9 1.9-1.2.7-.3 1.4-.4 2.6-.5C8.4 2.2 8.8 2.2 12 2.2zm0 1.8c-3.1 0-3.5 0-4.7.1-1.1.1-1.7.2-2.1.4-.5.2-.8.4-1.2.8-.4.4-.6.7-.8 1.2-.2.5-.3 1-.4 2.1-.1 1.2-.1 1.6-.1 4.7s0 3.5.1 4.7c.1 1.1.2 1.7.4 2.1.2.5.4.8.8 1.2.4.4.7.6 1.2.8.5.2 1 .3 2.1.4 1.2.1 1.6.1 4.7.1s3.5 0 4.7-.1c1.1-.1 1.7-.2 2.1-.4.5-.2.8-.4 1.2-.8.4-.4.6-.7.8-1.2.2-.5.3-1 .4-2.1.1-1.2.1-1.6.1-4.7s0-3.5-.1-4.7c-.1-1.1-.2-1.7-.4-2.1-.2-.5-.4-.8-.8-1.2-.4-.4-.7-.6-1.2-.8-.5-.2-1-.3-2.1-.4-1.2-.1-1.6-.1-4.7-.1zm0 3.5a6.5 6.5 0 1 1 0 13 6.5 6.5 0 0 1 0-13zm0 2.2a4.3 4.3 0 1 0 0 8.6 4.3 4.3 0 0 0 0-8.6zm6-2.7a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3z"/></svg>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
 
-        <section class="section container">
-            <h2>Featured Video</h2>
-            <figure>
-                <img class="responsive" src="assets/img/video_placeholder.png" alt="SDG 4 project video placeholder" />
-                <figcaption class="small">Video placeholder. Final YouTube link will be added by the video lead.</figcaption>
-            </figure>
-        </section>
+		<button id="backToTop" class="back-to-top" aria-label="Back to top" title="Back to top"><img src="assets/icons/Back To Top.png" alt="Back to top"></button>
+		<script>
+			// Lazy-load iframes by swapping data-src into src when visible (fallback for browsers without loading="lazy")
+			(function () {
+				function loadIframe(iframe) {
+					var src = iframe.getAttribute('data-src');
+					if (src) {
+						iframe.setAttribute('src', src);
+						iframe.removeAttribute('data-src');
+					}
+				}
+				function onIntersect(entries, observer) {
+					entries.forEach(function (entry) {
+						if (entry.isIntersecting || entry.intersectionRatio > 0) {
+							loadIframe(entry.target);
+							observer.unobserve(entry.target);
+						}
+					});
+				}
+				document.addEventListener('DOMContentLoaded', function () {
+					var iframes = Array.prototype.slice.call(document.querySelectorAll('iframe.lazy-iframe'));
+					if (iframes.length === 0) return;
 
-        <section class="section container">
-            <h2>Quick Navigator</h2>
-            <div class="grid cards">
-                <div class="card"><h3>About Us</h3><p><a class="btn" href="about/index.html">Meet the Team</a></p></div>
-                <div class="card"><h3>Factors</h3><p><a class="btn" href="factors/index.html">Open</a></p></div>
-                <div class="card"><h3>Implications</h3><p><a class="btn" href="implications/index.html">Open</a></p></div>
-                <div class="card"><h3>Reflections</h3><p><a class="btn" href="reflections/index.html">Read Reflections</a></p></div>
-                <div class="card"><h3>References</h3><p><a class="btn" href="references/index.html">Open References</a></p></div>
-                <div class="card"><h3>Appendix</h3><p><a class="btn" href="appendix/index.html">View Appendix</a></p></div>
-            </div>
-        </section>
-
-        <section class="section container">
-            <h2>Group Details</h2>
-            <div class="table-like">
-                <div class="row">
-                    <div class="cell"><strong>Unit</strong></div>
-                    <div class="cell">MPU3193 Philosophy & Current Issues</div>
-                </div>
-                <div class="row">
-                    <div class="cell"><strong>Campus</strong></div>
-                    <div class="cell">Swinburne University of Technology Sarawak</div>
-                </div>
-                <div class="row">
-                    <div class="cell"><strong>Group</strong></div>
-                    <div class="cell">Group 6 — 10 members</div>
-                </div>
-                <div class="row">
-                    <div class="cell"><strong>Project Topic</strong></div>
-                    <div class="cell">AI in Education — Are We Teaching Knowledge or Training Machines?</div>
-                </div>
-                <div class="row">
-                    <div class="cell"><strong>Contact</strong></div>
-                    <div class="cell"><a href="mailto:104400442@students.swinburne.edu.my">104400442@students.swinburne.edu.my</a></div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="footer-inner">
-            This e-portfolio was created for MPU3193 (SDG 4). Member photos and names are published with consent. Academic emails are for project contact only.
-        </div>
-    </footer>
-</body>
+					if ('IntersectionObserver' in window) {
+						var io = new IntersectionObserver(onIntersect, { root: null, threshold: 0.1 });
+						iframes.forEach(function (iframe) { io.observe(iframe); });
+					} else {
+						// No IntersectionObserver: load immediately
+						iframes.forEach(function (iframe) { loadIframe(iframe); });
+					}
+				});
+			})();
+		</script>
+	</body>
 </html>

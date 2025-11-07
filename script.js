@@ -186,6 +186,7 @@
 (()=>{
   const strip = document.querySelector('.team-strip');
   if(!strip) return;
+  const prefersReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   // Build a track and duplicate avatars for seamless loop
   const avatars = Array.from(strip.querySelectorAll('img.avatar'));
@@ -205,14 +206,15 @@
   });
 
   let paused = false;
-  let offset = 0;
-  let halfWidth = 0;
-  let speed = 0.35; // px per frame, left→right
+  let offset = 0;       // translateX offset (px)
+  let halfWidth = 0;    // width of one set of avatars
+  let speed = -0.35;    // px per frame, right→left
 
   const measure = () => {
     halfWidth = track.scrollWidth / 2;
-    // Start from -halfWidth so content appears to move rightwards
-    if(offset > 0 || offset < -halfWidth) offset = -halfWidth;
+    // Keep offset within [-halfWidth, 0] so looping is smooth
+    if(offset < -halfWidth) offset = -halfWidth;
+    if(offset > 0) offset = 0;
   };
   measure();
   window.addEventListener('resize', measure);
@@ -223,12 +225,27 @@
   const tick = () => {
     if(!paused){
       offset += speed;
-      if(offset >= 0) offset = -halfWidth;
+      if(offset <= -halfWidth) offset = 0;
       track.style.transform = `translateX(${offset}px)`;
     }
-    requestAnimationFrame(tick);
+    if(!prefersReduced) requestAnimationFrame(tick);
   };
-  requestAnimationFrame(tick);
+  if(!prefersReduced) requestAnimationFrame(tick);
+})();
+
+// Global: allow Escape to close the mobile menu for accessibility
+(()=>{
+  document.addEventListener('keydown', (e)=>{
+    if(e.key === 'Escape'){
+      const toggle = document.querySelector('.nav-toggle');
+      const nav = document.getElementById('primary-nav');
+      if(toggle && nav){
+        toggle.setAttribute('aria-expanded','false');
+        nav.dataset.open = 'false';
+        document.body.classList.remove('nav-open');
+      }
+    }
+  });
 })();
 
 

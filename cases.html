@@ -58,8 +58,8 @@
 						About Us
 					</a>
 					<button class="theme-toggle" type="button" aria-pressed="false" aria-label="Toggle light/dark" title="Toggle light/dark">
-						<span class="theme-toggle__icon" aria-hidden="true">
-						</span>
+						<img class="theme-toggle__icon theme-toggle__icon--light" src="assets/icons/Light Mode.png" alt="Light mode icon" width="24" height="24">
+						<img class="theme-toggle__icon theme-toggle__icon--dark" src="assets/icons/Dark Mode.png" alt="Dark mode icon" width="24" height="24">
 					</button>
 				</div>
 			</div>
@@ -70,7 +70,122 @@
   <h1>Five perspectives on quality learning with AI</h1>
   <p class="lead">Each case is presented as paragraphs: summary, factors, implications, solutions, and links to lecture topics.</p>
 </div></section>
-<section class="section"><div class="container"><div class="cards"><a class="card" href="case-ai-tutors.html"><h3>From Cramming to Coaching: AI Tutors in Large Classes</h3><p>AI tutors and copilots can transform large, lecture‑heavy courses into more coached experiences. Students receive instant hints and formative feedback while lecturers see analytics...</p><div class="tags"><span class="tag">Summary</span><span class="tag">Factors</span><span class="tag">Implications</span><span class="tag">Solutions</span></div></a><a class="card" href="case-authentic-assessment.html"><h3>Beyond Recall: Authentic Assessment in the AI Era</h3><p>If tasks reward recall and format, students will outsource to AI. Redesigning assessment toward explanation, creation and dialogue preserves learning value even when AI is present....</p><div class="tags"><span class="tag">Summary</span><span class="tag">Factors</span><span class="tag">Implications</span><span class="tag">Solutions</span></div></a><a class="card" href="case-access-gap.html"><h3>Bridging the Gap: Devices, Bandwidth and Language</h3><p>AI reduces inequalities only when learners can actually use it. Translation, captions and adaptive pacing support inclusion, but without devices, bandwidth and accessible design, g...</p><div class="tags"><span class="tag">Summary</span><span class="tag">Factors</span><span class="tag">Implications</span><span class="tag">Solutions</span></div></a><a class="card" href="case-teacher-time.html"><h3>Freeing Time: AI for Teacher Feedback and Prep</h3><p>AI can support teachers by drafting outlines, checking alignment to outcomes and generating practice questions—not to replace teachers but to free hours for mentoring. Quality rise...</p><div class="tags"><span class="tag">Summary</span><span class="tag">Factors</span><span class="tag">Implications</span><span class="tag">Solutions</span></div></a><a class="card" href="case-privacy-minors.html"><h3>Protecting Learners: Privacy‑by‑Design for Minors</h3><p>Trust sustains adoption. Privacy‑by‑design means clear consent, minimal data, transparent storage and student control. Approaches must be legible to students and families and embed...</p><div class="tags"><span class="tag">Summary</span><span class="tag">Factors</span><span class="tag">Implications</span><span class="tag">Solutions</span></div></a></div></div></section>
+<section class="section"><div class="container">
+<!-- FILTER-CHIPS:START -->
+<div class="chips" aria-label="Filter cases by theme">
+  <button class="chip" data-theme="Fairness" aria-pressed="false">Fairness</button>
+  <button class="chip" data-theme="Bias" aria-pressed="false">Bias</button>
+  <button class="chip" data-theme="Teaching Workflow" aria-pressed="false">Teaching Workflow</button>
+  <button class="chip" data-theme="Higher-Ed" aria-pressed="false">Higher-Ed</button>
+  <button class="chip" data-theme="Infrastructure" aria-pressed="false">Infrastructure</button>
+  <button class="chip" data-theme="Malaysia" aria-pressed="false">Malaysia</button>
+  </div>
+<!-- FILTER-CHIPS:END -->
+
+<!-- CASES-SEARCH:START -->
+<label for="cases-search" class="visually-hidden">Search cases, keywords, sources</label>
+<input id="cases-search" type="search" placeholder="Search cases, keywords, sources" autocomplete="off" />
+<!-- CASES-SEARCH:END -->
+
+<div class="cards">
+<!-- CASES-CARDS:START -->
+<article class="card case-card" data-themes="Fairness,Teaching Workflow,Malaysia" data-keywords="fairness equality of opportunity early warning selection model audit malaysia">
+  <img
+    src="/assets/img/fairness-equality-opportunity-hero.jpg"
+    srcset="/assets/img/fairness-equality-opportunity-hero.jpg 480w,
+            /assets/img/fairness-equality-opportunity-hero.jpg 768w,
+            /assets/img/fairness-equality-opportunity-hero.jpg 1200w"
+    sizes="(max-width: 640px) 100vw, (max-width: 960px) 50vw, 33vw"
+    alt="Teacher dashboard showing anonymized student flags"
+    loading="lazy" decoding="async"
+    width="1200" height="675">
+  <h3>Fairness vs equality of opportunity in school AI</h3>
+  <p>How to audit early warning and selection models so equally qualified students get equal chances.</p>
+  <div class="meta"><span class="chip small">Fairness</span><span class="chip small">Teaching Workflow</span><span class="chip small">Malaysia</span><span class="time">7 min</span></div>
+  <a class="btn" href="/cases/fairness-equality-opportunity.html">Read the case</a>
+</article>
+
+<article class="card case-card" data-themes="Bias,Teaching Workflow" data-keywords="bias stereotypes classroom llm narrative role play">
+  <img
+    src="/assets/img/llm-bias-student-identities-hero.jpg"
+    srcset="/assets/img/llm-bias-student-identities-hero.jpg 480w,
+            /assets/img/llm-bias-student-identities-hero.jpg 768w,
+            /assets/img/llm-bias-student-identities-hero.jpg 1200w"
+    sizes="(max-width: 640px) 100vw, (max-width: 960px) 50vw, 33vw"
+    alt="Collage of neutral silhouettes and classroom prompts"
+    loading="lazy" decoding="async"
+    width="1200" height="675">
+  <h3>Representational harms from classroom LLMs</h3>
+  <p>When AI stories teach stereotypes and how to stop it in real lessons.</p>
+  <div class="meta"><span class="chip small">Bias</span><span class="chip small">Teaching Workflow</span><span class="time">6 min</span></div>
+  <a class="btn" href="/cases/llm-bias-student-identities.html">Read the case</a>
+</article>
+
+<article class="card case-card" data-themes="Teaching Workflow,Fairness" data-keywords="assistive tools analytics teacher workflow captions translation feedback mastery">
+  <img
+    src="/assets/img/ai-equity-in-practice-hero.jpg"
+    srcset="/assets/img/ai-equity-in-practice-hero.jpg 480w,
+            /assets/img/ai-equity-in-practice-hero.jpg 768w,
+            /assets/img/ai-equity-in-practice-hero.jpg 1200w"
+    sizes="(max-width: 640px) 100vw, (max-width: 960px) 50vw, 33vw"
+    alt="Teacher reviewing analytics beside students"
+    loading="lazy" decoding="async"
+    width="1200" height="675">
+  <h3>Equity when AI is designed around teachers, not over them</h3>
+  <p>Assistive tools for students and analytics for teachers that actually work.</p>
+  <div class="meta"><span class="chip small">Teaching Workflow</span><span class="chip small">Fairness</span><span class="time">7 min</span></div>
+  <a class="btn" href="/cases/ai-equity-in-practice.html">Read the case</a>
+</article>
+
+<article class="card case-card" data-themes="Higher-Ed,Malaysia" data-keywords="malaysia higher education satisfaction adoption policy model cards">
+  <img
+    src="/assets/img/ai-malaysia-higher-ed-hero.jpg"
+    srcset="/assets/img/ai-malaysia-higher-ed-hero.jpg 480w,
+            /assets/img/ai-malaysia-higher-ed-hero.jpg 768w,
+            /assets/img/ai-malaysia-higher-ed-hero.jpg 1200w"
+    sizes="(max-width: 640px) 100vw, (max-width: 960px) 50vw, 33vw"
+    alt="Malaysian campus study space"
+    loading="lazy" decoding="async"
+    width="1200" height="675">
+  <h3>What Malaysian uni students actually value in AI tools</h3>
+  <p>Reliability and usefulness beat hype on campus.</p>
+  <div class="meta"><span class="chip small">Higher-Ed</span><span class="chip small">Malaysia</span><span class="time">6 min</span></div>
+  <a class="btn" href="/cases/ai-malaysia-higher-ed.html">Read the case</a>
+</article>
+
+<article class="card case-card" data-themes="Infrastructure,Malaysia" data-keywords="penang digital school library edge caching 5g latency offline">
+  <img
+    src="/assets/img/penang-digital-school-library-hero.jpg"
+    srcset="/assets/img/penang-digital-school-library-hero.jpg 480w,
+            /assets/img/penang-digital-school-library-hero.jpg 768w,
+            /assets/img/penang-digital-school-library-hero.jpg 1200w"
+    sizes="(max-width: 640px) 100vw, (max-width: 960px) 50vw, 33vw"
+    alt="School network diagram with edge cache nodes"
+    loading="lazy" decoding="async"
+    width="1200" height="675">
+  <h3>Penang's digital school library model shows what equity looks like</h3>
+  <p>Edge servers plus 5G so learning works on a busy Tuesday morning.</p>
+  <div class="meta"><span class="chip small">Infrastructure</span><span class="chip small">Malaysia</span><span class="time">7 min</span></div>
+  <a class="btn" href="/cases/penang-digital-school-library.html">Read the case</a>
+</article>
+<!-- CASES-CARDS:END -->
+</div>
+
+<!-- CASES-SIDEBAR:START -->
+<aside class="cases-sidebar">
+  <section class="box">
+    <h4>How to use these cases</h4>
+    <ul><li>Skim the Quick take.</li><li>Jump to Practical implementation.</li><li>Share the teacher pack in your school group.</li></ul>
+  </section>
+  <section class="box">
+    <h4>Philosophy lenses</h4>
+    <ul class="lenses"><li><a href="#glossary-eop">Equality of Opportunity</a></li><li><a href="#glossary-dignity">Dignity</a></li><li><a href="#glossary-care">Ethics of Care</a></li><li><a href="#glossary-capability">Capability Approach</a></li></ul>
+  </section>
+  <a class="btn secondary" href="/downloads/cases-pack.pdf">Download pack</a>
+</aside>
+<!-- CASES-SIDEBAR:END -->
+
+</div></section>
 </main>
 <footer>
   <div class="container">
@@ -92,8 +207,12 @@
       </nav>
       <div class="footer-extra">
         <div class="social">
-          <a class="icon-link" href="https://youtu.be/NNE41BfpzYk?si=Nacs5S74gBt02OUi" target="_blank" rel="noopener" aria-label="YouTube"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.5 6.2c-.3-1.2-1.3-2.1-2.6-2.3C18.8 3.5 12 3.5 12 3.5s-6.8 0-8.9.4C1.8 4.1.8 5 0.5 6.2 0 8.3 0 12 0 12s0 3.7.5 5.8c.3 1.2 1.3 2.1 2.6 2.3 2.1.4 8.9.4 8.9.4s6.8 0 8.9-.4c1.3-.2 2.3-1.1 2.6-2.3.5-2.1.5-5.8.5-5.8s0-3.7-.5-5.8zM9.6 15.5V8.5L15.8 12l-6.2 3.5z"/></svg></a>
-          <a class="icon-link" href="https://www.instagram.com/yoriichi_0824?igsh=bjd2bDN5MDJxbmEz&utm_source=qr" target="_blank" rel="noopener" aria-label="Instagram"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.9.2 2.6.5.7.3 1.3.6 1.9 1.2.6.6.9 1.2 1.2 1.9.3.7.4 1.4.5 2.6.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.2 1.9-.5 2.6-.3.7-.6 1.3-1.2 1.9-.6.6-1.2.9-1.9 1.2-.7.3-1.4.4-2.6.5-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.9-.2-2.6-.5-.7-.3-1.3-.6-1.9-1.2-.6-.6-.9-1.2-1.2-1.9-.3-.7-.4-1.4-.5-2.6C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.2-1.9.5-2.6.3-.7.6-1.3 1.2-1.9.6-.6 1.2-.9 1.9-1.2.7-.3 1.4-.4 2.6-.5C8.4 2.2 8.8 2.2 12 2.2zm0 1.8c-3.1 0-3.5 0-4.7.1-1.1.1-1.7.2-2.1.4-.5.2-.8.4-1.2.8-.4.4-.6.7-.8 1.2-.2.5-.3 1-.4 2.1-.1 1.2-.1 1.6-.1 4.7s0 3.5.1 4.7c.1 1.1.2 1.7.4 2.1.2.5.4.8.8 1.2.4.4.7.6 1.2.8.5.2 1 .3 2.1.4 1.2.1 1.6.1 4.7.1s3.5 0 4.7-.1c1.1-.1 1.7-.2 2.1-.4.5-.2.8-.4 1.2-.8.4-.4.6-.7.8-1.2.2-.5.3-1 .4-2.1.1-1.2.1-1.6.1-4.7s0-3.5-.1-4.7c-.1-1.1-.2-1.7-.4-2.1-.2-.5-.4-.8-.8-1.2-.4-.4-.7-.6-1.2-.8-.5-.2-1-.3-2.1-.4-1.2-.1-1.6-.1-4.7-.1zm0 3.5a6.5 6.5 0 1 1 0 13 6.5 6.5 0 0 1 0-13zm0 2.2a4.3 4.3 0 1 0 0 8.6 4.3 4.3 0 0 0 0-8.6zm6-2.7a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3z"/></svg></a>
+          <a class="icon-link" href="https://youtu.be/NNE41BfpzYk?si=Nacs5S74gBt02OUi" target="_blank" rel="noopener" aria-label="YouTube">
+            <img src="assets/icons/YouTube.png" alt="YouTube icon" width="24" height="24" loading="lazy" decoding="async">
+          </a>
+          <a class="icon-link" href="https://www.instagram.com/yoriichi_0824?igsh=bjd2bDN5MDJxbmEz&utm_source=qr" target="_blank" rel="noopener" aria-label="Instagram">
+            <img src="assets/icons/Instagram.png" alt="Instagram icon" width="24" height="24" loading="lazy" decoding="async">
+          </a>
         </div>
         <a class="contact-button" href="mailto:104400442@students.swinburne.edu.my">Contact Us</a>
       </div>

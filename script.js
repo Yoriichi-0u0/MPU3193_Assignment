@@ -58,34 +58,47 @@
 
 // Theme toggle (light/dark)
 (()=>{
-  const btn = document.querySelector('.theme-toggle');
-  if(!btn) return;
+  const toggle = document.querySelector('.theme-toggle');
+  if(!toggle) return;
 
   const root = document.documentElement;
-  const apply = (theme)=>{
-    if(theme === 'light'){
-      root.setAttribute('data-theme','light');
-      btn.setAttribute('aria-pressed','true');
-    }else{
-      root.removeAttribute('data-theme');
-      btn.setAttribute('aria-pressed','false');
-    }
+  const setLabel = (mode)=>{
+    const targetMode = mode === 'light' ? 'dark' : 'light';
+    toggle.setAttribute('aria-label', `Switch to ${targetMode} mode`);
   };
 
-  // Initial theme: localStorage -> system preference -> default (dark)
+  const apply = (mode)=>{
+    if(mode === 'light'){
+      root.setAttribute('data-theme','light');
+    }else{
+      root.removeAttribute('data-theme');
+    }
+    setLabel(mode === 'light' ? 'light' : 'dark');
+  };
+
   let stored = localStorage.getItem('theme');
   if(!stored && window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches){
     stored = 'light';
   }
   apply(stored);
 
-  btn.addEventListener('click', ()=>{
+  const handleToggle = ()=>{
     const isLight = root.getAttribute('data-theme') === 'light';
     const next = isLight ? 'dark' : 'light';
     apply(next);
     if(next === 'light') localStorage.setItem('theme','light');
     else localStorage.removeItem('theme');
-  });
+  };
+
+  toggle.addEventListener('click', handleToggle);
+  if(toggle.tagName !== 'BUTTON'){
+    toggle.addEventListener('keydown', (event)=>{
+      if(event.key === 'Enter' || event.key === ' '){
+        event.preventDefault();
+        handleToggle();
+      }
+    });
+  }
 })();
 
 // Hide header on scroll down, show on scroll up
@@ -170,6 +183,15 @@
     };
     requestAnimationFrame(step);
   });
+
+  if(btn.tabIndex >= 0){
+    btn.addEventListener('keydown', (event)=>{
+      if(event.key === 'Enter' || event.key === ' '){
+        event.preventDefault();
+        btn.click();
+      }
+    });
+  }
 })();
 
 // Slow down the Why section video playback
@@ -180,57 +202,6 @@
   if(v.readyState >= 1) setRate();
   v.addEventListener('loadedmetadata', setRate);
   v.addEventListener('play', setRate);
-})();
-
-// Auto-scrolling team strip: moves left→right, pause on hover, click → About Us
-(()=>{
-  const strip = document.querySelector('.team-strip');
-  if(!strip) return;
-  const prefersReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-  // Build a track and duplicate avatars for seamless loop
-  const avatars = Array.from(strip.querySelectorAll('img.avatar'));
-  if(avatars.length === 0) return;
-  const track = document.createElement('div');
-  track.className = 'team-track';
-  avatars.forEach(a => track.appendChild(a));
-  avatars.forEach(a => track.appendChild(a.cloneNode(true)));
-  strip.appendChild(track);
-
-  // All avatars navigate to About Us
-  track.addEventListener('click', (e)=>{
-    const t = e.target;
-    if(t && t.classList && t.classList.contains('avatar')){
-      window.location.href = 'about.html';
-    }
-  });
-
-  let paused = false;
-  let offset = 0;       // translateX offset (px)
-  let halfWidth = 0;    // width of one set of avatars
-  let speed = -0.35;    // px per frame, right→left
-
-  const measure = () => {
-    halfWidth = track.scrollWidth / 2;
-    // Keep offset within [-halfWidth, 0] so looping is smooth
-    if(offset < -halfWidth) offset = -halfWidth;
-    if(offset > 0) offset = 0;
-  };
-  measure();
-  window.addEventListener('resize', measure);
-
-  strip.addEventListener('mouseenter', ()=> paused = true);
-  strip.addEventListener('mouseleave', ()=> paused = false);
-
-  const tick = () => {
-    if(!paused){
-      offset += speed;
-      if(offset <= -halfWidth) offset = 0;
-      track.style.transform = `translateX(${offset}px)`;
-    }
-    if(!prefersReduced) requestAnimationFrame(tick);
-  };
-  if(!prefersReduced) requestAnimationFrame(tick);
 })();
 
 // Global: allow Escape to close the mobile menu for accessibility
@@ -249,3 +220,53 @@
 })();
 
 
+// CASES-FILTERS:START
+(function () {
+  const chips = Array.from(document.querySelectorAll('.chip[data-theme]'));
+  const cards = Array.from(document.querySelectorAll('.case-card'));
+  const input = document.getElementById('cases-search');
+
+  function activeThemes() {
+    return chips.filter(c => c.classList.contains('active')).map(c => c.dataset.theme);
+  }
+
+  function matchesThemes(card, themes) {
+    if (themes.length === 0) return true;
+    const cardThemes = (card.dataset.themes || '').split(',').map(s => s.trim());
+    return themes.every(t => cardThemes.includes(t));
+  }
+
+  function matchesQuery(card, q) {
+    if (!q) return true;
+    const hay = ((card.dataset.keywords || '') + ' ' + card.textContent).toLowerCase();
+    return hay.includes(q);
+  }
+
+  function applyFilters() {
+    const themes = activeThemes();
+    const q = (input && input.value || '').toLowerCase().trim();
+    cards.forEach(card => {
+      const ok = matchesThemes(card, themes) && matchesQuery(card, q);
+      card.style.display = ok ? '' : 'none';
+    });
+  }
+
+  chips.forEach(chip => {
+    chip.addEventListener('click', () => {
+      chip.classList.toggle('active');
+      chip.setAttribute('aria-pressed', chip.classList.contains('active') ? 'true' : 'false');
+      applyFilters();
+    });
+  });
+
+  if (input) {
+    let t = null;
+    input.addEventListener('input', () => {
+      clearTimeout(t);
+      t = setTimeout(applyFilters, 180);
+    });
+  }
+
+  applyFilters();
+})();
+// CASES-FILTERS:END

@@ -24,19 +24,33 @@
           <span class="nav-toggle__label">Menu</span>
           <span class="nav-toggle__icon" aria-hidden="true"></span>
         </button>
-                                        <nav id="primary-nav" aria-label="Primary">
-                                        <ul>
-                                                <li>
-                                                        <a href="cases.html">Case Studies</a>
-                                                </li>
-                                        </ul>
-                                </nav>
-                                <div class="nav-actions">
-                                        <div class="theme-toggle" id="themeToggle" tabindex="0" aria-label="Toggle light and dark mode">
-                                                <img class="theme-toggle__icon theme-toggle__icon--light" src="assets/icons/Light Mode.png" alt="" width="28" height="28">
-                                                <img class="theme-toggle__icon theme-toggle__icon--dark" src="assets/icons/Dark Mode.png" alt="" width="28" height="28">
-                                        </div>
-                                </div>
+        <nav id="primary-nav" aria-label="Primary">
+          <ul>
+            <li>
+              <a href="index.html">Home</a>
+            </li>
+            <li>
+              <a href="cases.html">Case Studies</a>
+            </li>
+            <li>
+              <a href="campaign.html">Campaign</a>
+            </li>
+            <li>
+              <a href="references.html">References</a>
+            </li>
+            <li>
+              <a href="appendix.html">Appendix</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="nav-actions">
+          <a class="about-link" href="about.html">
+            About Us
+          </a>
+          <div class="theme-toggle" id="themeToggle" tabindex="0" aria-label="Toggle light and dark mode">
+            <img class="theme-toggle__icon theme-toggle__icon--light" src="assets/icons/Light Mode.png" alt="" width="28" height="28">
+            <img class="theme-toggle__icon theme-toggle__icon--dark" src="assets/icons/Dark Mode.png" alt="" width="28" height="28">
+          </div>
         </div>
       </div>
     </header>
@@ -52,6 +66,15 @@
           </div>
         </div>
       </section>
+      <nav class="case-subnav" aria-label="Case study navigation">
+        <div class="container case-subnav__list">
+          <a class="case-subnav__link" href="cases.html">Case Studies</a>
+          <a class="case-subnav__link" href="factors.html">Factors</a>
+          <a class="case-subnav__link" href="implications.html">Implications</a>
+          <a class="case-subnav__link" href="solutions.html">Solutions</a>
+          <a class="case-subnav__link is-active" href="topic-connection.html" aria-current="page">Topic Connection</a>
+        </div>
+      </nav>
       <section class="section case-section" id="case-1">
         <div class="container case-section__layout">
           <figure class="case-section__media">

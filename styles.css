@@ -215,8 +215,6 @@ footer{padding:32px 0;border-top:1px solid var(--line);background:rgba(8,12,25,.
 .case-section--placeholder .case-section__media img{opacity:.8}
 .references-section{padding-top:40px;padding-bottom:80px}
 .references-list{margin:0;padding-left:22px;display:grid;gap:14px;color:var(--muted);font-size:.95rem}
-.case-topic-grid{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
-.case-topic-grid .case-topic{height:100%}
 .case-topic{border:1px solid var(--line);border-radius:var(--radius-sm);padding:16px 18px;background:rgba(255,255,255,.03)}
 .case-topic h3{margin:0 0 8px;font-size:1.05rem;color:var(--accent2)}
 .case-topic p{margin:0;color:var(--muted)}

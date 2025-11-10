@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">Illustration of students presenting authentic assessments with faculty feedback</title>
+  <desc id="desc">A collaborative studio scene with students showcasing projects, rubrics, and feedback loops.</desc>
+  <defs>
+    <linearGradient id="studio-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F1436" />
+      <stop offset="55%" stop-color="#1D2760" />
+      <stop offset="100%" stop-color="#020924" />
+    </linearGradient>
+    <linearGradient id="panel" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#233873" />
+      <stop offset="100%" stop-color="#162656" />
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7EE6FF" />
+      <stop offset="100%" stop-color="#8FFFBC" />
+    </linearGradient>
+    <linearGradient id="warm" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFAF7B" />
+      <stop offset="100%" stop-color="#FF6F91" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="675" fill="url(#studio-bg)" />
+  <g opacity="0.35">
+    <circle cx="320" cy="180" r="110" fill="rgba(142, 222, 255, 0.4)" />
+    <circle cx="880" cy="140" r="150" fill="rgba(127, 255, 179, 0.35)" />
+    <circle cx="600" cy="500" r="220" fill="rgba(255, 182, 193, 0.28)" />
+  </g>
+  <g fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.12)" stroke-width="2">
+    <rect x="150" y="120" width="260" height="380" rx="24" />
+    <rect x="470" y="80" width="260" height="440" rx="28" />
+    <rect x="790" y="140" width="260" height="360" rx="26" />
+  </g>
+  <g stroke="url(#accent)" stroke-width="6" stroke-linecap="round" fill="none">
+    <path d="M280 220 Q360 320 540 300" />
+    <path d="M540 300 Q720 280 920 320" />
+    <path d="M280 420 Q420 520 600 520" />
+    <path d="M600 520 Q780 520 950 420" />
+  </g>
+  <g fill="url(#accent)">
+    <circle cx="280" cy="220" r="20" />
+    <circle cx="540" cy="300" r="24" />
+    <circle cx="920" cy="320" r="22" />
+    <circle cx="600" cy="520" r="26" />
+  </g>
+  <g fill="url(#panel)" stroke="rgba(255,255,255,0.18)" stroke-width="3" stroke-linejoin="round">
+    <rect x="190" y="170" width="180" height="240" rx="18" />
+    <rect x="510" y="140" width="180" height="260" rx="18" />
+    <rect x="830" y="190" width="170" height="220" rx="18" />
+  </g>
+  <g fill="#FFFFFF" font-family="'Inter', 'Segoe UI', sans-serif">
+    <text x="210" y="210" font-size="20" fill="rgba(255,255,255,0.78)">Design brief</text>
+    <text x="210" y="250" font-size="16" fill="rgba(255,255,255,0.6)">Prototype a local solution</text>
+    <text x="530" y="200" font-size="20" fill="rgba(255,255,255,0.78)">Rubric criteria</text>
+    <text x="530" y="240" font-size="16" fill="rgba(255,255,255,0.6)">Idea · Evidence · Impact</text>
+    <text x="850" y="240" font-size="20" fill="rgba(255,255,255,0.78)">Feedback loop</text>
+    <text x="850" y="280" font-size="16" fill="rgba(255,255,255,0.6)">Reflect · Revise · Present</text>
+  </g>
+  <g>
+    <path d="M230 420 h120 v60 h-120z" fill="url(#warm)" opacity="0.9" />
+    <path d="M550 420 h120 v60 h-120z" fill="url(#accent)" opacity="0.85" />
+    <path d="M860 410 h120 v70 h-120z" fill="url(#warm)" opacity="0.9" />
+  </g>
+  <g fill="#FFFFFF" font-family="'Inter', 'Segoe UI', sans-serif">
+    <text x="240" y="458" font-size="18" fill="rgba(0,0,0,0.7)">Student A</text>
+    <text x="560" y="458" font-size="18" fill="rgba(0,0,0,0.7)">Team rubric</text>
+    <text x="870" y="454" font-size="18" fill="rgba(0,0,0,0.7)">Mentor notes</text>
+  </g>
+  <g font-family="'Inter', 'Segoe UI', sans-serif" fill="#FFFFFF">
+    <text x="80" y="100" font-size="52" font-weight="700" letter-spacing="1.2">Authentic assessment studio</text>
+    <text x="80" y="148" font-size="24" fill="rgba(255,255,255,0.75)">Students present, receive feedback, and iterate with shared rubrics.</text>
+  </g>
+</svg>

@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">Placeholder illustration for upcoming case study</title>
+  <desc id="desc">Abstract gradient with geometric shapes indicating future content.</desc>
+  <defs>
+    <linearGradient id="placeholder-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#111b34" />
+      <stop offset="100%" stop-color="#18213f" />
+    </linearGradient>
+    <linearGradient id="placeholder-accent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4fd3ff" />
+      <stop offset="100%" stop-color="#7ef3a3" />
+    </linearGradient>
+    <radialGradient id="placeholder-glow" cx="20%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="rgba(83,179,255,0.35)" />
+      <stop offset="100%" stop-color="rgba(83,179,255,0)" />
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="675" fill="url(#placeholder-bg)" />
+  <rect width="1200" height="675" fill="url(#placeholder-glow)" />
+  <g fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="2">
+    <rect x="140" y="120" width="300" height="420" rx="38" />
+    <rect x="460" y="90" width="280" height="380" rx="32" />
+    <rect x="780" y="160" width="280" height="360" rx="32" />
+    <circle cx="300" cy="320" r="80" />
+    <circle cx="600" cy="280" r="92" />
+    <circle cx="930" cy="340" r="86" />
+  </g>
+  <g stroke="rgba(126,243,163,0.4)" stroke-width="3" fill="none" stroke-dasharray="12 18">
+    <circle cx="300" cy="320" r="128" />
+    <circle cx="600" cy="280" r="140" />
+    <circle cx="930" cy="340" r="132" />
+  </g>
+  <g fill="url(#placeholder-accent)">
+    <circle cx="300" cy="320" r="24" />
+    <circle cx="600" cy="280" r="26" />
+    <circle cx="930" cy="340" r="24" />
+  </g>
+  <g font-family="'Inter', 'Segoe UI', sans-serif" fill="#ffffff" text-anchor="middle">
+    <text x="600" y="540" font-size="52" font-weight="700">Future case in progress</text>
+    <text x="600" y="590" font-size="24" fill="rgba(255,255,255,0.7)">Content and visuals will be added soon.</text>
+  </g>
+</svg>

@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">Illustration representing the access gap for remote learning</title>
+  <desc id="desc">Students connected by uneven network signals highlighting differences in connectivity.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#11204A" />
+      <stop offset="55%" stop-color="#15315B" />
+      <stop offset="100%" stop-color="#0A142B" />
+    </linearGradient>
+    <radialGradient id="glow" cx="35%" cy="32%" r="60%">
+      <stop offset="0%" stop-color="rgba(83,179,255,0.55)" />
+      <stop offset="100%" stop-color="rgba(83,179,255,0)" />
+    </radialGradient>
+    <radialGradient id="glow2" cx="75%" cy="70%" r="45%">
+      <stop offset="0%" stop-color="rgba(126,243,163,0.5)" />
+      <stop offset="100%" stop-color="rgba(126,243,163,0)" />
+    </radialGradient>
+    <linearGradient id="node" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4FD3FF" />
+      <stop offset="100%" stop-color="#6FF3B8" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="675" fill="url(#bg)" />
+  <rect width="1200" height="675" fill="url(#glow)" />
+  <rect width="1200" height="675" fill="url(#glow2)" />
+  <g fill="none" stroke="rgba(255,255,255,0.18)" stroke-width="2" stroke-dasharray="6 14">
+    <circle cx="220" cy="170" r="120" />
+    <circle cx="940" cy="480" r="160" />
+    <path d="M310 220 Q520 120 720 220 T1120 320" />
+    <path d="M160 420 Q360 520 560 420 T920 260" />
+  </g>
+  <g stroke="rgba(255,255,255,0.15)" stroke-width="1.5" fill="none">
+    <path d="M220 170 Q400 230 520 140 Q640 50 800 120 Q960 190 1020 320" />
+    <path d="M200 520 Q420 460 560 520 Q700 580 880 500" />
+  </g>
+  <g fill="#0A142B" stroke="rgba(255,255,255,0.4)" stroke-width="1.5">
+    <circle cx="220" cy="170" r="54" />
+    <circle cx="520" cy="320" r="50" />
+    <circle cx="860" cy="220" r="60" />
+    <circle cx="1020" cy="420" r="46" />
+    <circle cx="640" cy="520" r="64" />
+  </g>
+  <g fill="url(#node)" stroke="rgba(10,20,43,0.9)" stroke-width="4">
+    <circle cx="220" cy="170" r="36" />
+    <circle cx="520" cy="320" r="32" />
+    <circle cx="860" cy="220" r="38" />
+    <circle cx="1020" cy="420" r="30" />
+    <circle cx="640" cy="520" r="42" />
+  </g>
+  <g fill="rgba(255,255,255,0.18)" font-family="'Inter', 'Segoe UI', sans-serif" font-weight="600">
+    <text x="170" y="176" font-size="18">2 bars</text>
+    <text x="492" y="326" font-size="20">3 bars</text>
+    <text x="828" y="226" font-size="20">Wi-Fi</text>
+    <text x="990" y="426" font-size="18">Offline</text>
+    <text x="604" y="526" font-size="20">4 bars</text>
+  </g>
+  <g font-family="'Inter', 'Segoe UI', sans-serif" fill="#ffffff">
+    <text x="80" y="580" font-size="56" font-weight="700" letter-spacing="1.4">Access gap in remote learning</text>
+    <text x="80" y="626" font-size="24" fill="rgba(255,255,255,0.75)">Uneven connectivity shapes participation, feedback, and confidence.</text>
+  </g>
+</svg>

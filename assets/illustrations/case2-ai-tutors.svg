@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">Illustration showing an AI tutor supporting a student and teacher</title>
+  <desc id="desc">A glowing interface links a student tablet, an AI assistant, and a teacher guiding learning.</desc>
+  <defs>
+    <linearGradient id="ai-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0B1C3E" />
+      <stop offset="55%" stop-color="#1C2F55" />
+      <stop offset="100%" stop-color="#051024" />
+    </linearGradient>
+    <radialGradient id="ai-glow" cx="55%" cy="45%" r="65%">
+      <stop offset="0%" stop-color="rgba(111, 207, 255, 0.55)" />
+      <stop offset="100%" stop-color="rgba(111, 207, 255, 0)" />
+    </radialGradient>
+    <linearGradient id="ai-panel" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#102E5F" />
+      <stop offset="100%" stop-color="#0A1F40" />
+    </linearGradient>
+    <linearGradient id="ai-node" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#68F2FF" />
+      <stop offset="100%" stop-color="#7EFFC3" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="675" fill="url(#ai-bg)" />
+  <rect width="1200" height="675" fill="url(#ai-glow)" />
+  <g stroke="rgba(255,255,255,0.14)" stroke-width="2" stroke-dasharray="10 18" fill="none">
+    <path d="M240 420 Q400 260 600 310 T960 240" />
+    <path d="M260 520 Q520 600 840 520" />
+    <circle cx="600" cy="320" r="220" />
+  </g>
+  <g fill="url(#ai-panel)" stroke="rgba(255,255,255,0.12)" stroke-width="3" stroke-linejoin="round">
+    <rect x="220" y="360" width="180" height="120" rx="18" />
+    <rect x="490" y="170" width="220" height="160" rx="20" />
+    <rect x="880" y="310" width="160" height="200" rx="22" />
+  </g>
+  <g fill="none" stroke="url(#ai-node)" stroke-width="6" stroke-linecap="round">
+    <path d="M310 360 L600 250" />
+    <path d="M600 250 L960 310" />
+    <path d="M310 480 L960 420" stroke-dasharray="14 16" />
+  </g>
+  <g fill="url(#ai-node)">
+    <circle cx="310" cy="420" r="26" />
+    <circle cx="600" cy="250" r="32" />
+    <circle cx="960" cy="360" r="28" />
+    <circle cx="960" cy="470" r="20" />
+  </g>
+  <g font-family="'Inter', 'Segoe UI', sans-serif" fill="#FFFFFF">
+    <text x="250" y="408" font-size="20" fill="rgba(255,255,255,0.7)">Student tablet</text>
+    <text x="556" y="232" font-size="20" fill="rgba(255,255,255,0.7)">AI co-pilot</text>
+    <text x="904" y="352" font-size="20" fill="rgba(255,255,255,0.7)">Teacher dashboard</text>
+    <text x="900" y="468" font-size="16" fill="rgba(255,255,255,0.6)">Human in loop</text>
+  </g>
+  <g font-family="'Inter', 'Segoe UI', sans-serif" fill="#FFFFFF">
+    <text x="80" y="110" font-size="56" font-weight="700" letter-spacing="1.6">AI tutors as co-pilots</text>
+    <text x="80" y="156" font-size="24" fill="rgba(255,255,255,0.75)">Assistive intelligence augments, not replaces, teachers.</text>
+  </g>
+</svg>

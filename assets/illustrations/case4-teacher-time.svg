@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">Illustration of a teacher automating paperwork to reclaim instructional time</title>
+  <desc id="desc">A calm workspace showing a teacher using supportive technology that reduces administrative burden and frees time for students.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#08162F" />
+      <stop offset="50%" stop-color="#152B56" />
+      <stop offset="100%" stop-color="#031026" />
+    </linearGradient>
+    <linearGradient id="screen" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7EE6FF" />
+      <stop offset="100%" stop-color="#9BFFBF" />
+    </linearGradient>
+    <linearGradient id="clock" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFAF7B" />
+      <stop offset="100%" stop-color="#FF6F91" />
+    </linearGradient>
+    <linearGradient id="paper" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1F3368" />
+      <stop offset="100%" stop-color="#101E44" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="675" fill="url(#bg)" />
+  <g opacity="0.35">
+    <circle cx="260" cy="160" r="140" fill="rgba(142, 222, 255, 0.35)" />
+    <circle cx="960" cy="200" r="180" fill="rgba(159, 255, 191, 0.28)" />
+    <circle cx="620" cy="520" r="220" fill="rgba(255, 182, 193, 0.25)" />
+  </g>
+  <g fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.12)" stroke-width="2">
+    <rect x="140" y="140" width="280" height="400" rx="28" />
+    <rect x="460" y="100" width="280" height="440" rx="30" />
+    <rect x="780" y="150" width="280" height="380" rx="28" />
+  </g>
+  <g>
+    <rect x="210" y="210" width="140" height="180" rx="18" fill="url(#paper)" stroke="rgba(255,255,255,0.15)" stroke-width="3" />
+    <rect x="210" y="410" width="140" height="80" rx="18" fill="url(#paper)" stroke="rgba(255,255,255,0.15)" stroke-width="3" />
+    <rect x="540" y="200" width="220" height="160" rx="22" fill="url(#screen)" opacity="0.85" />
+    <rect x="520" y="390" width="260" height="150" rx="24" fill="rgba(12,24,58,0.85)" stroke="rgba(255,255,255,0.15)" stroke-width="3" />
+    <rect x="850" y="230" width="160" height="120" rx="18" fill="url(#paper)" stroke="rgba(255,255,255,0.18)" stroke-width="3" />
+    <rect x="850" y="380" width="200" height="130" rx="22" fill="url(#paper)" stroke="rgba(255,255,255,0.18)" stroke-width="3" />
+  </g>
+  <g fill="#FFFFFF" font-family="'Inter', 'Segoe UI', sans-serif">
+    <text x="230" y="250" font-size="20" fill="rgba(255,255,255,0.78)">Auto-filled form</text>
+    <text x="230" y="290" font-size="16" fill="rgba(255,255,255,0.65)">Duplicates removed</text>
+    <text x="230" y="450" font-size="18" fill="rgba(255,255,255,0.7)">One-click reports</text>
+    <text x="560" y="250" font-size="20" fill="rgba(6,20,40,0.8)">Weekly schedule</text>
+    <text x="560" y="285" font-size="16" fill="rgba(6,20,40,0.7)">Prep · Feedback · Coaching</text>
+    <text x="540" y="430" font-size="20" fill="rgba(255,255,255,0.78)">Focus time gained</text>
+    <text x="540" y="470" font-size="16" fill="rgba(255,255,255,0.65)">+6 hrs for instruction</text>
+    <text x="870" y="275" font-size="18" fill="rgba(255,255,255,0.78)">Automation rules</text>
+    <text x="870" y="415" font-size="20" fill="rgba(255,255,255,0.78)">Family updates</text>
+    <text x="870" y="450" font-size="16" fill="rgba(255,255,255,0.65)">Sent in preferred languages</text>
+  </g>
+  <g stroke="url(#screen)" stroke-width="6" stroke-linecap="round" fill="none">
+    <path d="M350 260 Q460 220 540 240" />
+    <path d="M640 280 Q760 300 860 250" />
+    <path d="M640 440 Q780 420 900 420" />
+    <path d="M320 460 Q420 500 520 470" />
+  </g>
+  <g fill="url(#clock)">
+    <circle cx="1040" cy="140" r="70" />
+  </g>
+  <g stroke="#031026" stroke-width="8" stroke-linecap="round">
+    <line x1="1040" y1="140" x2="1040" y2="100" />
+    <line x1="1040" y1="140" x2="1080" y2="140" />
+  </g>
+  <g fill="#FFFFFF" font-family="'Inter', 'Segoe UI', sans-serif">
+    <text x="80" y="110" font-size="50" font-weight="700" letter-spacing="1">Teacher time reclaimed</text>
+    <text x="80" y="155" font-size="24" fill="rgba(255,255,255,0.75)">Less paperwork, more pedagogy.</text>
+  </g>
+</svg>

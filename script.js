@@ -101,16 +101,18 @@
   }
 })();
 
-// Hide header on scroll down, show on scroll up
+// Hide header (and case subnav) on scroll down, show on scroll up
 (()=>{
   const header = document.querySelector('header.site');
-  if(!header) return;
+  const subnav = document.querySelector('.case-subnav');
+  if(!header && !subnav) return;
   let lastY = window.scrollY || 0;
   let ticking = false;
   const threshold = 10; // ignore tiny scroll jitter
   const minShowTop = 100; // start hiding only after this offset
 
   const navIsOpen = () => document.body.classList.contains('nav-open');
+  const setHidden = (el, hide) => { if(el) el.classList.toggle('nav-hidden', hide); };
 
   const onScroll = () => {
     const y = window.scrollY || 0;
@@ -119,15 +121,15 @@
     const nearTop = y < 60;
 
     if(navIsOpen()){
-      header.classList.remove('nav-hidden');
+      setHidden(header,false); setHidden(subnav,false);
       lastY = y;
       return;
     }
 
     if(down && y > minShowTop){
-      header.classList.add('nav-hidden');
+      setHidden(header,true); setHidden(subnav,true);
     }else if(up || nearTop){
-      header.classList.remove('nav-hidden');
+      setHidden(header,false); setHidden(subnav,false);
     }
 
     lastY = y;

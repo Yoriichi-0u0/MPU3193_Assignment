@@ -21,12 +21,16 @@
 (()=>{
   const toggle = document.querySelector('.nav-toggle');
   const nav = document.getElementById('primary-nav');
+  const overlay = document.createElement('div');
+  overlay.className = 'nav-overlay';
+  document.body.appendChild(overlay);
   if(!toggle || !nav) return;
 
   const setState = (open)=>{
     toggle.setAttribute('aria-expanded', String(open));
     nav.dataset.open = open ? 'true' : 'false';
     document.body.classList.toggle('nav-open', open);
+    overlay.classList.toggle('visible', open);
   };
 
   setState(false);
@@ -35,6 +39,8 @@
     const isOpen = toggle.getAttribute('aria-expanded') === 'true';
     setState(!isOpen);
   });
+
+  overlay.addEventListener('click', ()=> setState(false));
 
   nav.addEventListener('click', (event)=>{
     const target = event.target;
@@ -194,6 +200,57 @@
       }
     });
   }
+})();
+
+// Scroll progress indicator
+(()=>{
+  const prefersReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const bar = document.createElement('div');
+  bar.id = 'scrollProgress';
+  document.body.appendChild(bar);
+
+  let ticking = false;
+  const update = () => {
+    const doc = document.documentElement;
+    const scrollY = window.scrollY || doc.scrollTop || 0;
+    const height = doc.scrollHeight - window.innerHeight;
+    const progress = height > 0 ? scrollY / height : 0;
+    bar.style.transform = `scaleX(${progress})`;
+    ticking = false;
+  };
+
+  const requestUpdate = () => {
+    if(ticking) return;
+    ticking = true;
+    requestAnimationFrame(update);
+  };
+
+  if(prefersReduced){
+    bar.style.display = 'none';
+    return;
+  }
+
+  update();
+  window.addEventListener('scroll', requestUpdate, { passive:true });
+  window.addEventListener('resize', requestUpdate);
+})();
+
+// Respect focus rings for keyboard users by adding a helper class
+(()=>{
+  const root = document.documentElement;
+  const handleFirstTab = (e)=>{
+    if(e.key === 'Tab'){
+      root.classList.add('user-is-tabbing');
+      window.removeEventListener('keydown', handleFirstTab);
+      window.addEventListener('mousedown', handleMouseDownOnce);
+    }
+  };
+  const handleMouseDownOnce = ()=>{
+    root.classList.remove('user-is-tabbing');
+    window.removeEventListener('mousedown', handleMouseDownOnce);
+    window.addEventListener('keydown', handleFirstTab);
+  };
+  window.addEventListener('keydown', handleFirstTab);
 })();
 
 // Slow down the Why section video playback

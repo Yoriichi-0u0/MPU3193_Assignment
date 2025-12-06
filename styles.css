@@ -170,9 +170,12 @@ h1{font-size:clamp(2.1rem,3vw + 1.8rem,3.4rem);margin:.75rem 0 .7rem;line-height
 	#primary-nav[data-open="true"]{opacity:1;visibility:visible;transform:translateY(0)}
 	.nav-toggle{display:inline-flex}
 	.nav-actions{display:none}
+	.nav-item--theme{width:100%}
+	.nav-item--theme .theme-toggle{width:100%;justify-content:center;padding:10px 10px;border:1px solid var(--line);background:color-mix(in srgb,var(--bg-accent) 20%,transparent)}
 }
 @media (min-width:821px){
-	#primary-nav .nav-item--about{display:none}
+	#primary-nav .nav-item--about,
+	#primary-nav .nav-item--theme{display:none}
 }
 @media (max-width:560px){
 	.hero{padding:78px 0 52px;min-height:clamp(320px,70vh,640px)}

@@ -3,19 +3,26 @@
   if (prefersReduced) return; // Respect reduced motion
 
   const revealTargets = document.querySelectorAll('.section, .card, .avatar, .section-title, .lead, .kicker, h1');
-  const observer = new IntersectionObserver((entries)=>{
-    entries.forEach((entry)=>{
-      if(entry.isIntersecting){
-        entry.target.classList.add('reveal-visible');
-        observer.unobserve(entry.target);
-      }
-    });
-  },{threshold:0.12, rootMargin:'0px 0px -40px 0px'});
+  if('IntersectionObserver' in window){
+    const observer = new IntersectionObserver((entries)=>{
+      entries.forEach((entry)=>{
+        if(entry.isIntersecting){
+          entry.target.classList.add('reveal-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    },{threshold:0.12, rootMargin:'0px 0px -40px 0px'});
 
-  revealTargets.forEach(el=>{
-    el.classList.add('reveal');
-    observer.observe(el);
-  });
+    revealTargets.forEach(el=>{
+      el.classList.add('reveal');
+      observer.observe(el);
+    });
+
+    // Safari fallback: ensure everything is visible after a short delay
+    setTimeout(()=>revealTargets.forEach(el=>el.classList.add('reveal-visible')),800);
+  }else{
+    revealTargets.forEach(el=>el.classList.add('reveal-visible'));
+  }
 })();
 
 (()=>{
